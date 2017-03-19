@@ -1,0 +1,9 @@
+{
+  "name": "modern",
+  "version": "1.0.0",
+  "description": "The project for the modern javascript application series",
+  "main": "server.js",
+  "repository": "https://github.com/Bashkir15/Blog-ModernApplication.git",
+  "author": "Forrest Collins <Forest.d.collins@gmail.com>",
+  "license": "MIT"
+}
