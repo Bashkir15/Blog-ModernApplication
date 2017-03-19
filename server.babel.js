@@ -1,7 +1,7 @@
 import http from 'http'
 import expressConfig from './server/express'
 
-const ENV = (node.env.PROCESS_ENV || 'development');
+const ENV = (process.env.NODE_ENV || 'development');
 const appConfig = require(`./server/config/${ENV}`);
 
 const app = expressConfig();

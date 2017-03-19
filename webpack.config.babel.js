@@ -52,25 +52,7 @@ module.exports = {
 
 		{
 			test: /\.sass$/,
-			exclude: [/\.module\.sass$/],
-			use: ExtractTextPlugin.extract({
-				use: [
-					'css-loader',
-					'postcss-loader',
-
-					{
-						loader: 'sass-loader',
-						options: {
-							sourceMap: true,
-							includePaths: [
-								path.join(__dirname, 'node_modules')
-							],
-
-							outputStyle: 'compressed'
-						}
-					}
-				]
-			})
+			use: ['style-loader', 'css-loader', 'sass-loader']
 		},
 
 		{
@@ -83,10 +65,18 @@ module.exports = {
 		extensions: ['.js', '.jsx', '.json', '.sass', '.css']
 	},
 
+	externals: {
+		'cheerio': 'window',
+		'react/addons': true,
+		'react/lib/ExecutionEnvironment': true,
+		'react/lib/ReactContext': true
+	},
+
 	plugins: [
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
 		}),
+		new ExtractTextPlugin('main.css')
 	]
 }
 

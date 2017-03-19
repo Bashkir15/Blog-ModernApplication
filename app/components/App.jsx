@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react';
+import '../static/styles/main.sass';
 
 class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<p>{this.props.title}</p>
+				<p className="test">{this.props.title}</p>
 			</div>
 		);
 	}
