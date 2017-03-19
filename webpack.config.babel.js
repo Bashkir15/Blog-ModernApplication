@@ -13,7 +13,8 @@ const PATHS = {
 module.exports = {
 	devtool: 'eval-source-map',
 	entry: {
-		app: PATHS.app
+		app: PATHS.app,
+
 	},
 
 	output: {
@@ -79,10 +80,23 @@ module.exports = {
 		'react/lib/ReactContext': true
 	},
 
+	devServer: {
+		historyApiFallback: true,
+		hot: true,
+		inline: true,
+		stats: 'errors-only',
+		host: 'localhost',
+		port: 3000,
+		proxy: {
+			"*": "http://localhost:8000"
+		}
+	},
+
 	plugins: [
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
 		}),
+		new webpack.HotModuleReplacementPlugin(),
 		new ExtractTextPlugin('main.css')
 	]
 }
