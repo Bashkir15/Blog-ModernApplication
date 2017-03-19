@@ -20,12 +20,16 @@ module.exports = {
 		"func-names": 0,
 		"eol-last": 0,
 		"react/no-unused-prop-types": 0,
-		"react/jsx-filename-extensions": [1, {"extensions": [".js", ".jsx"]}],
+		"react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
 		"react/jsx-no-bind": [2, {
 			"ignoreRefs": false,
 			"allowArrowFunctions": true,
 			"allowBind": true
-		}]
+		}],
+		"react/jsx-indent": 0,
+		"react/prefer-stateless-function": 0,
+		"no-tabs": 0,
+		"indent": 0
 	},
 
 	"plugins": [
