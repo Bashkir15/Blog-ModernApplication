@@ -4,7 +4,7 @@ import '../static/styles/main.sass';
 class App extends React.Component {
 	render() {
 		return (
-			<div>
+			<div className="container">
 				<p className="test">{this.props.title}</p>
 			</div>
 		);

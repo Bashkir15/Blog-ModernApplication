@@ -1,7 +1,7 @@
-import path from 'path'
-import validate from 'webpack-validator'
-import webpack from 'webpack'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
@@ -35,6 +35,13 @@ module.exports = {
 			loaders: ['eslint-loader'],
 			enforce: 'pre',
 			include: PATHS.app
+		},
+
+		{
+			test: /\.js$/,
+			loader: 'babel-loader',
+			include: path.join(__dirname, 'test'),
+			exclude: /node_modules/
 		},
 
 		{
