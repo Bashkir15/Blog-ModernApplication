@@ -34,7 +34,7 @@ module.exports = {
 			test: /\.jsx?$/,
 			loaders: ['eslint-loader'],
 			enforce: 'pre',
-			include: PATHS.app
+			include: PATHS.app + '/**/*.jsx'
 		},
 
 		{

@@ -26,6 +26,7 @@ module.exports = {
 			"allowArrowFunctions": true,
 			"allowBind": true
 		}],
+		"jsx-quotes": 0,
 		"react/jsx-indent": 0,
 		"react/prefer-stateless-function": 0,
 		"no-tabs": 0,
