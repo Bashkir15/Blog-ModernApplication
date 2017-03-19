@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 
+import '../../static/styles/shared/components/nav.sass'
+
 class Nav extends React.Component {
 	render() {
 		return (
